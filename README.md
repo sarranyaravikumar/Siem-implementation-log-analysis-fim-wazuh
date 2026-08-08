@@ -1,4 +1,4 @@
-# A Real-Time Security Information and Event Management (SIEM) System with File Integrity Monitoring Using Wazuh
+#  Security Information and Event Management (SIEM) System with File Integrity Monitoring Using Wazuh
 
 ## 📌 Overview
 
@@ -47,25 +47,33 @@ Linux Command Line
 PowerShell
 
 ## 📁 Repository Structure
-Siem-implementation-log-analysis-fim-wazuh/
-│
-├── README.md
+Wazuh-SIEM-FIM/
 │
 ├── architecture/
-│   └── wazuh-siem-fim-architecture.png
-│
 ├── configuration/
-│   └── Configuration files and related information
-│
 ├── Screenshots/
-│   ├── Ubuntu installation screenshots
-│   ├── Windows Agent screenshots
-│   ├── Wazuh Dashboard screenshots
-│   └── FIM alert screenshots
+├── learn/
+│   ├── 00-OVERVIEW.md
+│   ├── 01-CONCEPTS.md
+│   ├── 02-ARCHITECTURE.md
+│   ├── 03-IMPLEMENTATION.md
+│   └── 04-RESULTS.md
 │
 ├── Wazuh-SIEM-FIM-Documentation.pdf
-│
-└── Wazuh-SIEM-FIM-Results.pdf
+├── Wazuh-SIEM-FIM-Results.pdf
+└── README.md
+
+## 📚 Learn
+
+This project includes step-by-step learning materials covering SIEM concepts, Wazuh architecture, implementation, File Integrity Monitoring, and project results.
+
+| Module | Topic |
+|--------|-------|
+| [00 - Overview](./learn/00-OVERVIEW.md) | Project overview, prerequisites, objectives, and quick start |
+| [01 - Concepts](./learn/01-CONCEPTS.md) | SIEM, Wazuh, security events, agents, managers, and File Integrity Monitoring concepts |
+| [02 - Architecture](./learn/02-ARCHITECTURE.md) | Wazuh Manager, Windows Agent, communication flow, and system architecture |
+| [03 - Implementation](./learn/03-IMPLEMENTATION.md) | Wazuh installation, Windows Agent configuration, agent registration, and FIM configuration |
+| [04 - Results](./learn/04-RESULTS.md) | FIM testing, detected events, dashboard verification, and project results |
 
 ## ⚙️ Project Workflow
 1. Wazuh Manager Deployment
