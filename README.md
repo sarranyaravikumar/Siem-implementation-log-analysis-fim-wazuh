@@ -78,67 +78,35 @@ This project includes step-by-step learning materials covering SIEM concepts, Wa
 ## ⚙️ Project Workflow
 1. Wazuh Manager Deployment
 
-The Wazuh Manager was installed and configured on an Ubuntu 22.04.5 LTS virtual machine.
+Wazuh Manager was installed and configured on an Ubuntu 22.04.5 LTS virtual machine, including the repository, GPG key, required components, and services.
 
-The installation included:
-
-Preparing the Ubuntu environment
-Adding the Wazuh repository and GPG key
-Installing the Wazuh Manager components
-Starting and verifying the required services
 2. Wazuh Dashboard Configuration
 
-After installing the Wazuh Manager, the Wazuh Dashboard was accessed through a web browser.
+The Wazuh Dashboard was accessed through a web browser to monitor agents, security events, alerts, and FIM events.
 
-The dashboard provides a centralized interface for:
-
-Monitoring connected agents
-Viewing security events
-Investigating alerts
-Monitoring File Integrity events
 3. Windows Agent Deployment
 
-The Wazuh Agent was installed on a Windows endpoint.
-
-The Windows Agent was configured with the IP address of the Ubuntu Wazuh Manager and the agent was started successfully.
-
-The agent was then registered with the Wazuh Manager to establish communication between the endpoint and the manager.
+The Wazuh Agent was installed on the Windows endpoint, configured with the Ubuntu Manager IP, and registered successfully.
 
 4. Agent Verification
 
-The Windows Agent connection was verified through the Wazuh Dashboard.
-
-The connected endpoint was monitored for security and system events.
+The Windows Agent connection was verified through the Wazuh Dashboard, allowing system and security events to be monitored.
 
 5. File Integrity Monitoring
 
-File Integrity Monitoring was configured on the Windows endpoint.
+FIM was configured on a selected Windows directory to detect file creation, modification, deletion, and other integrity changes.
 
-A specific directory was selected for monitoring. Wazuh was configured to detect changes made to files within the monitored directory.
-
-The FIM implementation detects:
-
-File creation
-File modification
-File deletion
-File changes and related integrity events
 6. FIM Testing
 
-The FIM functionality was tested by performing file operations on the monitored Windows directory.
-
-Test activities included:
-
-Creating a new file
-Modifying an existing file
-Deleting a file
-
-The generated events were collected by the Wazuh Agent and sent to the Wazuh Manager for analysis.
+FIM was tested by creating, modifying, and deleting files in the monitored directory. The events were collected by the agent and sent to the manager.
 
 7. Alert Verification
 
-The generated security and file integrity events were verified through the Wazuh Dashboard.
+The generated security and FIM events were verified and analyzed through the Wazuh Dashboard.
 
-The dashboard was used to observe and analyze the events generated from the Windows endpoint.
+## 📊 Wazuh Dashboard
+<img width="1282" height="804" alt="wazuh dasboard" src="https://github.com/user-attachments/assets/64707a0a-d5dc-451a-a84f-04a9f5444cf1" />
+
 
 ## 🔒 Security Benefits
 Centralized collection and analysis of endpoint security information.
