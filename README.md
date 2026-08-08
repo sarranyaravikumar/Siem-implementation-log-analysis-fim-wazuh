@@ -46,22 +46,6 @@ SIEM
 Linux Command Line
 PowerShell
 
-## 📁 Repository Structure
-Wazuh-SIEM-FIM/
-│
-├── architecture/
-├── configuration/
-├── Screenshots/
-├── learn/
-│   ├── 00-OVERVIEW.md
-│   ├── 01-CONCEPTS.md
-│   ├── 02-ARCHITECTURE.md
-│   ├── 03-IMPLEMENTATION.md
-│   └── 04-RESULTS.md
-│
-├── Wazuh-SIEM-FIM-Documentation.pdf
-├── Wazuh-SIEM-FIM-Results.pdf
-└── README.md
 
 ## 📚 Learn
 
@@ -105,7 +89,8 @@ FIM was tested by creating, modifying, and deleting files in the monitored direc
 The generated security and FIM events were verified and analyzed through the Wazuh Dashboard.
 
 ## 📊 Wazuh Dashboard
-<img width="1282" height="804" alt="wazuh dasboard" src="https://github.com/user-attachments/assets/64707a0a-d5dc-451a-a84f-04a9f5444cf1" />
+<img width="1282" height="807" alt="wazuh manager" src="https://github.com/user-attachments/assets/40d2162e-cfda-43e5-acfa-dddfd39b7885" />
+
 
 
 ## 🔒 Security Benefits
