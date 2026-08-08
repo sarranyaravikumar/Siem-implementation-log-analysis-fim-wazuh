@@ -53,11 +53,11 @@ This project includes step-by-step learning materials covering SIEM concepts, Wa
 
 | Module | Topic |
 |--------|-------|
-| [00 - Overview](./learn/00-OVERVIEW.md) | Project overview, prerequisites, objectives, and quick start |
-| [01 - Concepts](./learn/01-CONCEPTS.md) | SIEM, Wazuh, security events, agents, managers, and File Integrity Monitoring concepts |
-| [02 - Architecture](./learn/02-ARCHITECTURE.md) | Wazuh Manager, Windows Agent, communication flow, and system architecture |
-| [03 - Implementation](./learn/03-IMPLEMENTATION.md) | Wazuh installation, Windows Agent configuration, agent registration, and FIM configuration |
-| [04 - Results](./learn/04-RESULTS.md) | FIM testing, detected events, dashboard verification, and project results |
+| [00 - Overview](./Learn/00-OVERVIEW.md) | Project overview, prerequisites, objectives, and quick start |
+| [01 - Concepts](./Learn/01-CONCEPTS.md) | SIEM, Wazuh, security events, agents, managers, and File Integrity Monitoring concepts |
+| [02 - Architecture](./Learn/02-ARCHITECTURE.md) | Wazuh Manager, Windows Agent, communication flow, and system architecture |
+| [03 - Implementation](./Learn/03-IMPLEMENTATION.md) | Wazuh installation, Windows Agent configuration, agent registration, and FIM configuration |
+| [04 - Results](./Learn/04-RESULTS.md) | FIM testing, detected events, dashboard verification, and project results |
 
 ## ⚙️ Project Workflow
 1. Wazuh Manager Deployment
