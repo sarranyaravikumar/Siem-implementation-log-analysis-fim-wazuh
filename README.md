@@ -23,44 +23,7 @@ This project was implemented as a small-scale cybersecurity laboratory environme
 - Provide centralized visualization through the Wazuh Dashboard.
 
 ---
-
-## 🏗️ Architecture
-
-```text
-┌─────────────────────────┐
-│    Windows Endpoint     │
-│                         │
-│ Windows Logs & Events   │
-│ File Integrity Changes  │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│      Wazuh Agent        │
-│                         │
-│ Log Collection          │
-│ FIM Monitoring          │
-└────────────┬────────────┘
-             │
-             │ Secure Communication
-             ▼
-┌─────────────────────────┐
-│    Ubuntu Server        │
-│     Wazuh Manager       │
-│                         │
-│ Event Processing        │
-│ Event Analysis          │
-│ Rule Engine             │
-│ Alerting                │
-└────────────┬────────────┘
-             │
-      ┌──────┼──────┐
-      ▼      ▼      ▼
-   Logs    Alerts Dashboard
-   Storage          │
-                   ▼
-              Visualization
-Components
+## Components
 Component	Role
 Ubuntu 22.04.5 LTS	Wazuh Manager
 Windows	Monitored Endpoint
@@ -72,7 +35,7 @@ The project architecture follows:
 
 Windows Endpoint → Wazuh Agent → Wazuh Manager → Event Processing → Rule Engine → Alerts / Dashboard / Log Storage
 
-🛠️ Technologies Used
+## 🛠️ Technologies Used
 Wazuh
 Ubuntu 22.04.5 LTS (Jammy Jellyfish)
 Windows
@@ -82,3 +45,96 @@ File Integrity Monitoring (FIM)
 SIEM
 Linux Command Line
 PowerShell
+
+## 📁 Repository Structure
+Siem-implementation-log-analysis-fim-wazuh/
+│
+├── README.md
+│
+├── architecture/
+│   └── wazuh-siem-fim-architecture.png
+│
+├── configuration/
+│   └── Configuration files and related information
+│
+├── Screenshots/
+│   ├── Ubuntu installation screenshots
+│   ├── Windows Agent screenshots
+│   ├── Wazuh Dashboard screenshots
+│   └── FIM alert screenshots
+│
+├── Wazuh-SIEM-FIM-Documentation.pdf
+│
+└── Wazuh-SIEM-FIM-Results.pdf
+
+## ⚙️ Project Workflow
+1. Wazuh Manager Deployment
+
+The Wazuh Manager was installed and configured on an Ubuntu 22.04.5 LTS virtual machine.
+
+The installation included:
+
+Preparing the Ubuntu environment
+Adding the Wazuh repository and GPG key
+Installing the Wazuh Manager components
+Starting and verifying the required services
+2. Wazuh Dashboard Configuration
+
+After installing the Wazuh Manager, the Wazuh Dashboard was accessed through a web browser.
+
+The dashboard provides a centralized interface for:
+
+Monitoring connected agents
+Viewing security events
+Investigating alerts
+Monitoring File Integrity events
+3. Windows Agent Deployment
+
+The Wazuh Agent was installed on a Windows endpoint.
+
+The Windows Agent was configured with the IP address of the Ubuntu Wazuh Manager and the agent was started successfully.
+
+The agent was then registered with the Wazuh Manager to establish communication between the endpoint and the manager.
+
+4. Agent Verification
+
+The Windows Agent connection was verified through the Wazuh Dashboard.
+
+The connected endpoint was monitored for security and system events.
+
+5. File Integrity Monitoring
+
+File Integrity Monitoring was configured on the Windows endpoint.
+
+A specific directory was selected for monitoring. Wazuh was configured to detect changes made to files within the monitored directory.
+
+The FIM implementation detects:
+
+File creation
+File modification
+File deletion
+File changes and related integrity events
+6. FIM Testing
+
+The FIM functionality was tested by performing file operations on the monitored Windows directory.
+
+Test activities included:
+
+Creating a new file
+Modifying an existing file
+Deleting a file
+
+The generated events were collected by the Wazuh Agent and sent to the Wazuh Manager for analysis.
+
+7. Alert Verification
+
+The generated security and file integrity events were verified through the Wazuh Dashboard.
+
+The dashboard was used to observe and analyze the events generated from the Windows endpoint.
+
+## 🔒 Security Benefits
+Centralized collection and analysis of endpoint security information.
+Real-time visibility into monitored file changes.
+Faster identification of potentially unauthorized file activity.
+Open-source and cost-effective security monitoring.
+Dashboard-based visualization for easier investigation of events and alerts.
